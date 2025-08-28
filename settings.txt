@@ -1,0 +1,423 @@
+////////////////////////////////////////////////////////////////////
+Wallpaper 1
+
+  function setup() {
+  createCanvas(2000, 1000);
+  background(200, 230, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawDefinedDuck(x, y);
+    }
+  }
+}
+
+function drawDefinedDuck(x, y) {
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // body
+  ellipse(x, y, 30, 30);      // head
+
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);  // beak
+
+  fill(0);
+  ellipse(x - 7, y - 5, 5, 5); // Left eye
+  ellipse(x + 7, y - 5, 5, 5); // Right eye
+
+fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15); // Wing
+
+  fill(255, 150, 0);
+  ellipse(x - 10, y + 50, 10, 5); // Feet
+  ellipse(x + 10, y + 50, 10, 5);
+}
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 2
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(200, 230, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawShinyDuck(x, y);
+    }
+  }
+}
+
+function drawShinyDuck(x, y) {
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);  // Beak
+
+  fill(0);
+  ellipse(x - 6, y - 5, 5, 5); // Eyes
+  ellipse(x + 6, y - 5, 5, 5);
+
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15); // Wing
+
+  fill(255, 255, 255, 120); // highlights
+  ellipse(x - 10, y - 5, 6, 6);    // On head
+  ellipse(x + 10, y + 20, 10, 8);  // On body
+}
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 3
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(200, 230, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawHatDuck(x, y);
+    }
+  }
+}
+
+function drawHatDuck(x, y) {
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);  // Beak
+
+  fill(0);
+  ellipse(x - 6, y - 5, 5, 5); // Eyes
+  ellipse(x + 6, y - 5, 5, 5);
+
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15); // Wing
+
+  fill(100, 100, 255);
+  arc(x, y - 15, 25, 15, PI, 0); // Cap brim
+  rect(x - 12, y - 20, 24, 8);   // Cap top
+}
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 4
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(180, 220, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawSleepingDuck(x, y);
+    }
+  }
+}
+
+function drawSleepingDuck(x, y) {
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);  // Beak
+
+  stroke(0);
+  strokeWeight(1.5);
+  line(x - 8, y - 5, x - 4, y - 5); // Left closed eye
+  line(x + 4, y - 5, x + 8, y - 5); // Right closed eye
+  noStroke();
+
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15); // Wing
+}
+
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 5
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(210, 240, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawFluffyDuck(x, y);
+    }
+  }
+}
+
+function drawFluffyDuck(x, y) {
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);  // Beak
+
+  fill(0);
+  ellipse(x - 6, y - 5, 5, 5);
+  ellipse(x + 6, y - 5, 5, 5);
+
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15); // Wing
+
+  // spikes bling (spikes)
+  stroke(255, 220, 50);
+  strokeWeight(1.5);
+  for (let i = 0; i < 360; i += 30) {
+    let angle = radians(i);
+    let x1 = x + cos(angle) * 35;
+    let y1 = y + 30 + sin(angle) * 25;
+    let x2 = x + cos(angle) * 40;
+    let y2 = y + 30 + sin(angle) * 30;
+    line(x1, y1, x2, y2);
+  }
+  noStroke();
+}
+
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 6 
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(240, 220, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 80; y < height; y += 120) {
+      drawHeartDuck(x, y);
+    }
+  }
+}
+
+function drawHeartDuck(x, y) {
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);  // Beak
+
+  fill(0);
+  ellipse(x - 6, y - 5, 5, 5);
+  ellipse(x + 6, y - 5, 5, 5);
+
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15); // Wing
+
+  // Heart above
+  fill(255, 80, 120);
+  beginShape();
+  vertex(x, y - 35);
+  bezierVertex(x - 10, y - 50, x - 25, y - 30, x, y - 20);
+  bezierVertex(x + 25, y - 30, x + 10, y - 50, x, y - 35);
+  endShape(CLOSE);
+}
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 7 
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(200, 230, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawDuckWithBubblesOnHead(x, y);
+    }
+  }
+}
+
+function drawDuckWithBubblesOnHead(x, y) {
+  // Duck body
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  // Beak
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);
+
+  // Eyes
+  fill(0);
+  ellipse(x - 6, y - 5, 5, 5);
+  ellipse(x + 6, y - 5, 5, 5);
+
+  // Wing
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15);
+
+  // Feet
+  fill(255, 150, 0);
+  ellipse(x - 10, y + 50, 10, 5);
+  ellipse(x + 10, y + 50, 10, 5);
+
+  // 3 Bubbles sitting on top of head
+  fill(255, 255, 255, 180);
+  ellipse(x - 12, y - 12, 18);
+  ellipse(x, y - 20, 22);
+  ellipse(x + 14, y - 12, 15);
+
+}
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 8
+
+function setup() {
+  createCanvas(2000, 1000);
+  background(200, 230, 255);
+  noStroke();
+
+  for (let x = 60; x < width; x += 120) {
+    for (let y = 60; y < height; y += 120) {
+      drawDuckWithBubblesOnHead(x, y);
+    }
+  }
+}
+
+function drawDuckWithBubblesOnHead(x, y) {
+  // Duck body
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  // Beak
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);
+
+  // Eyes
+  fill(0);
+  ellipse(x - 6, y - 5, 5, 5);
+  ellipse(x + 6, y - 5, 5, 5);
+
+  // Wing
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15);
+
+  // Feet
+  fill(255, 150, 0);
+  ellipse(x - 10, y + 50, 10, 5);
+  ellipse(x + 10, y + 50, 10, 5);
+
+  // 3 Bubbles sitting on top of head
+  fill(255, 255, 255, 180);
+  ellipse(x - 12, y - 12, 18);
+  ellipse(x, y - 20, 22);
+  ellipse(x + 14, y - 12, 15);
+
+  // Bubbles near left paddles
+  ellipse(x - 25, y + 45, 18);
+  ellipse(x - 35, y + 55, 14);
+  ellipse(x - 20, y + 60, 10);
+}
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 9 Final
+
+let backgroundBubbles = [];
+
+function setup() {
+  createCanvas(2000, 1000); 
+  noStroke();
+  angleMode(DEGREES);
+
+  
+  for (let i = 0; i < 300; i++) {
+    backgroundBubbles.push({
+      x: random(width),
+      y: random(height),
+      size: random(8, 20),
+      alpha: random(50, 120),
+    });
+  }
+}
+
+function draw() {
+  background(200, 230, 255);
+
+  // random bubbles in background
+  for (let b of backgroundBubbles) {
+    fill(255, 255, 255, b.alpha);
+    ellipse(b.x, b.y, b.size);
+  }
+
+  let spacingX = 130;
+  let spacingY = 130;
+
+  for (let i = 0, x = 90; x < width; x += spacingX, i++) {
+    for (let j = 0, y = 90; y < height; y += spacingY, j++) {
+      push();
+      translate(x, y);
+      rotate(45);
+
+      let cool = (i % 5 === 2); // every 5 columns, make one duck wear pink shades
+      drawDuckWithBubblesOnHead(0, 0, cool);
+
+      pop();
+    }
+  }
+
+  noLoop();
+}
+
+function drawDuckWithBubblesOnHead(x, y, cool = false) {
+  // duck body
+  fill(255, 230, 0);
+  ellipse(x, y + 30, 60, 40); // Body
+  ellipse(x, y, 30, 30);      // Head
+
+  // beak
+  fill(255, 150, 0);
+  ellipse(x, y + 5, 20, 10);
+
+  // eyes or pink sunglasses
+  if (cool) {
+    fill(255, 105, 180); // pink lenses
+    rect(x - 12, y - 8, 9, 8, 2); // left lens
+    rect(x + 3, y - 8, 9, 8, 2);  // right lens
+
+    fill(255, 105, 180); // pink bridge
+rect(x - 2, y - 6.5, 4, 3);   // glasses bridge
+
+  } else {
+    fill(0);
+    ellipse(x - 6, y - 5, 5, 5);
+    ellipse(x + 6, y - 5, 5, 5);
+  }
+
+  // wing
+  fill(255, 210, 0);
+  ellipse(x + 15, y + 30, 20, 15);
+
+  // feet
+  fill(255, 150, 0);
+  ellipse(x - 10, y + 50, 10, 5);
+  ellipse(x + 10, y + 50, 10, 5);
+
+  // bubbles on head
+  fill(255, 255, 255, 180);
+  ellipse(x - 12, y - 12, 18);
+  ellipse(x, y - 20, 22);
+  ellipse(x + 14, y - 12, 15);
+
+  // bubbles near left foot
+  ellipse(x - 25, y + 45, 18);
+  ellipse(x - 35, y + 55, 14);
+  ellipse(x - 20, y + 60, 10);
+} 
